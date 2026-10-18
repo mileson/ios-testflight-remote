@@ -2,6 +2,20 @@
 
 这个 Skill 用来让 Agent 帮你完成 iOS 的 TestFlight Internal 发布，适合你不在电脑旁、但需要快速推送内测版本的场景。
 
+[Agent 的执行流程](#readme-section-1) · [你可以直接让 Agent 做什么](#readme-section-2) · [仓库导航](#readme-section-6)
+
+<a id="readme-section-1"></a>
+
+## Agent 的执行流程
+
+1. 先预检项目和环境，确认能发布。
+2. 自动扫描并补齐材料，缺什么一次性告诉你。
+3. 给出版本建议（patch/minor/major），你确认后才正式发布。
+4. 执行构建上传和测试组分发。
+5. 返回发布结果，并告诉你首装和后续更新的操作方式。
+
+<a id="readme-section-2"></a>
+
 ## 你可以直接让 Agent 做什么
 
 - 自动检查当前项目是否具备发布条件（Xcode、fastlane、lane、项目元数据）
@@ -9,6 +23,8 @@
 - 给出建议版本号并等待你确认
 - 自动执行构建、上传、Internal Group 分发
 - 发布后校验测试者是否可见最新 build
+
+<a id="readme-section-3"></a>
 
 ## 你怎么对 Agent 下指令
 
@@ -18,13 +34,7 @@
 - `我现在不在电脑旁，帮我走远程内测发布`
 - `执行 internal_release，发到 Agent Internal Testing`
 
-## Agent 的执行流程
-
-1. 先预检项目和环境，确认能发布。
-2. 自动扫描并补齐材料，缺什么一次性告诉你。
-3. 给出版本建议（patch/minor/major），你确认后才正式发布。
-4. 执行构建上传和测试组分发。
-5. 返回发布结果，并告诉你首装和后续更新的操作方式。
+<a id="readme-section-4"></a>
 
 ## 你需要提前准备
 
@@ -38,3 +48,20 @@
 - 目标测试者邮箱（可多个）
 
 首次准备可参考：`references/newbie-guide.md`
+
+<a id="readme-section-5"></a>
+
+## 进一步阅读
+
+- [Agent 使用说明](SKILL.md)
+
+<a id="readme-section-6"></a>
+
+## 仓库导航
+
+| 入口 | 内容 |
+| --- | --- |
+| [`SKILL.md`](SKILL.md) | Agent 使用规则与执行入口 |
+| [`examples/`](examples/) | 可参考的输入与调用示例 |
+| [`references/`](references/) | 技能规则与输入输出合同 |
+| [`scripts/`](scripts/) | 开发与维护脚本 |
